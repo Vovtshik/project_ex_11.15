@@ -1,7 +1,7 @@
 #include "../std_lib_facilities.h"
 
 void input_file(string& name_file, vector<double>&vn); 
-void formatted_output_file(vector<double>&vn);
+void formatted_output_file(string& name_file, vector<double>&vn);
 
 int main()
 {
@@ -21,7 +21,20 @@ void input_file(string& name_file, vector<double>&vn)
     }
 }
 
-void formatted_output_file(vector<double>&vn)
+void formatted_output_file(string& name_file, vector<double>&vn)
 {
-    
+    ofstream ost{name_file};
+   if (!ost) error("Unable to open output file ", name_file);
+   ost << scientific;
+   int i = 0;
+   for(double x: vn)
+   {
+       ++i; 
+       ost << setw(5) << x;
+       if(i == 4)
+       {
+           ost << '\n';
+           i = 0;
+       } 
+   }
 }
