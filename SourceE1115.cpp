@@ -31,7 +31,7 @@ void formatted_output_file(string& name_file, vector<double>&vn)
 {
     ofstream ost{name_file};
    if (!ost) error("Unable to open output file ", name_file);
-   ost << scientific;
+   ost << scientific << setprecision(8);
    int i = 0;
    for(double x: vn)
    {
