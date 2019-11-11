@@ -36,7 +36,7 @@ void formatted_output_file(string& name_file, vector<double>&vn)
    for(double x: vn)
    {
        ++i; 
-       ost << setw(5) << x;
+       ost << setw(20) << x;
        if(i == 4)
        {
            ost << '\n';
