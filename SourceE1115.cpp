@@ -6,7 +6,13 @@ void formatted_output_file(string& name_file, vector<double>&vn);
 int main()
 {
     vector<double>vn;
-
+    cout << "Enter a file name for reading numbers:\n";
+    string name_file;
+    cin >> name_file;
+    input_file(name_file, vn);
+    cout << "Enter a file name for formatted output:\n";
+    cin >> name_file;
+    formatted_output_file(name_file, vn);
     return 0;
 }
 
