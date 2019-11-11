@@ -1,7 +1,7 @@
 #include "../std_lib_facilities.h"
 
-void input_file(string& name_file, vector<double>&vn); 
-void formatted_output_file(string& name_file, vector<double>&vn);
+void input_file(string& name_file, vector<double>&vn);              // Function for reading numbers from a file
+void formatted_output_file(string& name_file, vector<double>&vn);   // Function for formatted output to a file
 
 int main()
 {
